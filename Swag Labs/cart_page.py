@@ -16,3 +16,6 @@ def get_cart_products(driver):
         print(f" - {product}")
 
         return cart_products_names
+
+
+
