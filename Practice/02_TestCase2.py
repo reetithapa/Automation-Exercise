@@ -19,8 +19,8 @@ def login(driver):
     assert "Login to your account" in driver.find_element(By.XPATH, "//h2[text()='Login to your account']").text
     print("Login to your account is visible")
 
-    driver.find_element(By.CSS_SELECTOR, "input[data-qa='login-email']").send_keys("harry123harry@gmail.com")
-    driver.find_element(By.CSS_SELECTOR, "input[data-qa='login-password']").send_keys("harry123")
+    driver.find_element(By.CSS_SELECTOR, "input[data-qa='login-email']").send_keys("Test.2@gmail.com")
+    driver.find_element(By.CSS_SELECTOR, "input[data-qa='login-password']").send_keys("Test2")
 
     driver.find_element(By.CSS_SELECTOR, "button[data-qa='login-button']").click()
 

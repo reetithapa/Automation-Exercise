@@ -26,8 +26,7 @@ def login_signup(driver):
     print("'New User Signup!' is visible")
 
     driver.find_element(By.NAME, "name").send_keys("Hello world")
-    email = f"test_{int(time.time())}@gmail.com"
-    driver.find_element(By.CSS_SELECTOR, "input[data-qa='signup-email']").send_keys(email)
+    driver.find_element(By.NAME, "email").send_keys("Test.2@gmail.com")
 
     driver.find_element(By.CSS_SELECTOR, "button[data-qa='signup-button']").click()
     print("Signup successful")
@@ -67,7 +66,8 @@ def login_signup(driver):
     print("Account created")
 
     #assert driver.find_element(By.XPATH, "//h2[text()='Account Created!']").is_displayed()
-    driver.find_element(By.CSS_SELECTOR, ".btn.btn-primary").click()
+    driver.find_element(By.CSS_SELECTOR, "a.btn.btn-primary").click()
+    print("Account Created Clicked")
 
     #assert driver.find_element(By.PARTIAL_LINK_TEXT, "Logged in as").is_displayed()
 
